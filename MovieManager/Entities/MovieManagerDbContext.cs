@@ -11,10 +11,13 @@ public class MovieManagerDbContext : DbContext
     public DbSet<Movie> Movies { get; set; }
     public DbSet<MovieGenre> MovieGenres { get; set; }
     public DbSet<Genre> Genres { get; set; }
+    public DbSet<Actor> Actors { get; set; }
+    public DbSet<MovieActor> MovieActors { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Movie>().HasMany(m => m.Genres).WithMany(g => g.Movies).UsingEntity<MovieGenre>();
+        modelBuilder.Entity<Movie>().HasMany(m => m.Actors).WithMany(a => a.Movies).UsingEntity<MovieActor>();
         modelBuilder.Entity<Movie>().HasData(
             new Movie
             {
@@ -82,6 +85,54 @@ public class MovieManagerDbContext : DbContext
             {
                 MovieId = 3,
                 GenreId = 2,
+            }
+        );
+
+        modelBuilder.Entity<Actor>().HasMany(a => a.Movies).WithMany(m => m.Actors).UsingEntity<MovieActor>();
+        modelBuilder.Entity<Actor>().HasData
+        (
+            new Actor
+            {
+                ActorId = 1,
+                FirstName = "Leonardo",
+                LastName = "DiCaprio",
+                Height = 183,
+                BirthDate = new DateTime(1974, 11, 11)
+            },
+            new Actor
+            {
+                ActorId = 2,
+                FirstName = "Keanu",
+                LastName = "Reeves",
+                Height = 186,
+                BirthDate = new DateTime(1964, 09, 02)
+            },
+            new Actor
+            {
+                ActorId = 3,
+                FirstName = "Tim",
+                LastName = "Curry",
+                Height = 175,
+                BirthDate = new DateTime(1946, 04, 19)
+            }
+        );
+
+        modelBuilder.Entity<MovieActor>().HasData
+        (
+            new MovieActor
+            {
+                ActorId = 1,
+                MovieId = 2
+            },
+            new MovieActor
+            {
+                ActorId = 2,
+                MovieId = 1
+            },
+            new MovieActor
+            {
+                ActorId = 3,
+                MovieId = 3
             }
         );
     }

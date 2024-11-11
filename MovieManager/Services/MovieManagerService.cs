@@ -67,4 +67,32 @@ public class MovieManagerService : IMovieManagerService
         _context.Genres.Remove(genre);
         _context.SaveChanges();
     }
+
+    public List<Actor> GetAllActors()
+    {
+        return _context.Actors.OrderBy(a => a.LastName).ToList();
+    }
+
+    public Actor GetActorById(int actorId)
+    {
+        return _context.Actors.FirstOrDefault(a => a.ActorId == actorId);
+    }
+
+    public void AddActor(Actor actor)
+    {
+        _context.Actors.Add(actor);
+        _context.SaveChanges();
+    }
+
+    public void UpdateActor(Actor actor)
+    {
+        _context.Actors.Update(actor);
+        _context.SaveChanges();
+    }
+
+    public void DeleteActor(Actor actor)
+    {
+        _context.Actors.Remove(actor);
+        _context.SaveChanges();
+    }
 }

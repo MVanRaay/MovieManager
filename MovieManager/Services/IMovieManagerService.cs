@@ -14,4 +14,9 @@ public interface IMovieManagerService
     public void AddGenre(Genre genre);
     public void UpdateGenre(Genre genre);
     public void DeleteGenre(Genre genre);
+    public List<Actor> GetAllActors();
+    public Actor GetActorById(int actorId);
+    public void AddActor(Actor actor);
+    public void UpdateActor(Actor actor);
+    public void DeleteActor(Actor actor);
 }

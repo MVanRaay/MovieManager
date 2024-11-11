@@ -9,103 +9,103 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MovieManager
 build_property.RootNamespace = MovieManager
-build_property.ProjectDir = C:\Users\marti\RiderProjects\MovieManager\MovieManager\
+build_property.ProjectDir = C:\Users\marti\Desktop\F2024Lap\Personal\MovieManager\MovieManager\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\marti\RiderProjects\MovieManager\MovieManager
+build_property.MSBuildProjectDirectory = C:\Users\marti\Desktop\F2024Lap\Personal\MovieManager\MovieManager
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Genres/Add.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Genres/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVzXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Genres/All.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Genres/All.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVzXEFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Genres/Delete.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Genres/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Genres/Edit.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Genres/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Genres/_GenreFormPartial.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Genres/_GenreFormPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVzXF9HZW5yZUZvcm1QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Genres/_GenreNavTabsGenericPartial.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Genres/_GenreNavTabsGenericPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVzXF9HZW5yZU5hdlRhYnNHZW5lcmljUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Genres/_GenreNavTabsSpecificPartial.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Genres/_GenreNavTabsSpecificPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVzXF9HZW5yZU5hdlRhYnNTcGVjaWZpY1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Home/Index.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Home/Privacy.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/Add.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/All.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/All.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXEFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/Delete.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/Details.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/Edit.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/Manage.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/Manage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXE1hbmFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/_MovieFormPartial.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/_MovieFormPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXF9Nb3ZpZUZvcm1QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/_MovieNavTabsGenericPartial.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/_MovieNavTabsGenericPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXF9Nb3ZpZU5hdlRhYnNHZW5lcmljUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Movies/_MovieNavTabsSpecificPartial.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Movies/_MovieNavTabsSpecificPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXF9Nb3ZpZU5hdlRhYnNTcGVjaWZpY1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Shared/Error.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/_ViewImports.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/_ViewStart.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/RiderProjects/MovieManager/MovieManager/Views/Shared/_Layout.cshtml]
+[C:/Users/marti/Desktop/F2024Lap/Personal/MovieManager/MovieManager/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-oru23i5at0

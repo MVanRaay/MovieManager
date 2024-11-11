@@ -42,9 +42,6 @@ public class Movie
     public List<MovieGenre>? MovieGenres { get; set; }
     public List<Genre>? Genres { get; set; }
     
-    // [Required(ErrorMessage = "Genre is required")]
-    // public int GenreId { get; set; }
-    //
-    // [ValidateNever]
-    // public Genre? Genre { get; set; }
+    public List<Actor>? Actors { get; set; }
+    public List<MovieActor>? MovieActors { get; set; }
 }
