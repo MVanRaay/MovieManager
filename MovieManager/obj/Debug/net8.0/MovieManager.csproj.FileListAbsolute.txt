@@ -424,3 +424,4 @@ C:\Users\marti\Desktop\F2024Lap\Personal\MovieManager\MovieManager\obj\Debug\net
 C:\Users\marti\Desktop\F2024Lap\Personal\MovieManager\MovieManager\obj\Debug\net8.0\MovieManager.pdb
 C:\Users\marti\Desktop\F2024Lap\Personal\MovieManager\MovieManager\obj\Debug\net8.0\MovieManager.genruntimeconfig.cache
 C:\Users\marti\Desktop\F2024Lap\Personal\MovieManager\MovieManager\obj\Debug\net8.0\ref\MovieManager.dll
+C:\Users\marti\RiderProjects\MovieManager\MovieManager\obj\Debug\net8.0\MovieManager.sourcelink.json

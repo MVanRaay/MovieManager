@@ -22,6 +22,8 @@ public class GenresController : Controller
         {
             Genres = _service.GetAllGenres()
         };
+
+        ViewBag.AllPage = "active";
         
         return View("All", viewModel);
     }
@@ -34,6 +36,8 @@ public class GenresController : Controller
         {
             Genre = new Genre()
         };
+        
+        ViewBag.AddPage = "active";
         
         return View("Add", viewModel);
     }
@@ -80,6 +84,32 @@ public class GenresController : Controller
         
         TempData["Message"] = $"Genre \"{viewModel.Genre.Name}\" updated successfully.";
         TempData["ColorName"] = "success";
+        
+        return RedirectToAction("AllGenres");
+    }
+    
+    // GET
+    [HttpGet("/genre/{genreId}/delete")]
+    public ViewResult DeleteGenre(int genreId)
+    {
+        var viewModel = new GenreViewModel
+        {
+            Genre = _service.GetGenreById(genreId)
+        };
+        
+        ViewBag.DeletePage = "active";
+        
+        return View("Delete", viewModel);
+    }
+    
+    // POST
+    [HttpPost("/genre/{genreId}/delete")]
+    public RedirectToActionResult DeleteGenre(GenreViewModel viewModel)
+    {
+        TempData["Message"] = $"Genre \"{viewModel.Genre.Name}\" deleted successfully.";
+        TempData["ColorName"] = "danger";
+        
+        _service.DeleteGenre(viewModel.Genre);
         
         return RedirectToAction("AllGenres");
     }

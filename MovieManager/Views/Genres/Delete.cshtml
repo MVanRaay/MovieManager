@@ -1,1 +1,19 @@
-﻿
+﻿@model GenreViewModel
+
+@{
+    ViewData["Title"] = "Delete Genre";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<partial name="_GenreNavTabsSpecificPartial" model="@Model.Genre" />
+
+<h1>@Model.Genre.Name</h1>
+
+<form method="post" asp-action="DeleteGenre">
+    <input type="hidden" asp-for="Genre.GenreId" value="@Model.Genre.GenreId" />
+    <div class="mb-3">
+        <input class="btn btn-outline-danger" type="submit" value="Delete"/>
+        <a class="btn btn-secondary" asp-action="AllGenres">Cancel</a>
+    </div>
+</form>

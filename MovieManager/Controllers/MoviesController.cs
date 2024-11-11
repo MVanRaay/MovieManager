@@ -27,6 +27,8 @@ public class MoviesController : Controller
             Movies = moviesList
         };
 
+        ViewBag.AllPage = "active";
+
         return View("All", viewModel);
     }
 
@@ -38,8 +40,8 @@ public class MoviesController : Controller
         {
             Movie = new Movie()
         };
-
-        ViewBag.GenresList = _service.GetAllGenres();
+        
+        ViewBag.AddPage = "active";
 
         return View("Add", viewModel);
     }

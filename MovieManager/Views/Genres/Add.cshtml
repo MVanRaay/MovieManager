@@ -6,14 +6,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<ul class="nav nav-tabs mb-3">
-    <li class="nav-item">
-        <a class="nav-link" asp-action="AllGenres">All Genres</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" asp-action="AddGenre">Add a Genre</a>
-    </li>
-</ul>
+<partial name="_GenreNavTabsGenericPartial" />
 
 <form method="post" asp-action="AddGenre">
     <partial name="_GenreFormPartial" for="@Model.Genre" />

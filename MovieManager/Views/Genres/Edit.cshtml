@@ -6,7 +6,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<partial name="_GenreNavTabsPartial" model="@Model.Genre" />
+<partial name="_GenreNavTabsSpecificPartial" model="@Model.Genre" />
 
 <form method="post" asp-action="EditGenre" asp-route-genreId="@Model.Genre.GenreId">
     <input type="hidden" asp-for="@Model.Genre.GenreId" />

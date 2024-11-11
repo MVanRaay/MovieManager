@@ -6,7 +6,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<partial name="_MovieNavTabsPartial" model="@Model.Movie" />
+<partial name="_MovieNavTabsSpecificPartial" model="@Model.Movie" />
 
 <form method="post" asp-action="EditMovie">
     <input type="hidden" asp-for="Movie.MovieId" />
