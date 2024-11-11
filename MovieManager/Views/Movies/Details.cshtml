@@ -16,7 +16,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<partial name="_MovieNavTabsPartial" model="@Model.Movie" />
+<partial name="_MovieNavTabsSpecificPartial" model="@Model.Movie" />
 
 <div class="mb-3 mt-3">
     <h1>@Model.Movie.Title</h1>
@@ -40,7 +40,7 @@
             Rated <strong>@Model.Movie.Rating</strong>/10
         </div>
         <div class="mb-3">
-            Genres: 
+            <label asp-for="Movie.Genres">Genre@(Model.Movie.Genres.Count > 1 ? "s" : ""):</label>
             <ul class="list-unstyled">
                 @foreach (var genre in @Model.Movie.Genres)
                 {

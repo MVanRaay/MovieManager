@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S1K9nrzH4xs=",
+  "dgSpecHash": "Vbcb1oVXros=",
   "success": true,
-  "projectFilePath": "C:\\Users\\marti\\Desktop\\F2024Lap\\Personal\\MovieManager\\MovieManager\\MovieManager.csproj",
+  "projectFilePath": "C:\\Users\\marti\\RiderProjects\\MovieManager\\MovieManager\\MovieManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marti\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -14,12 +14,12 @@ public class MovieManagerService : IMovieManagerService
 
     public List<Movie> GetAllMovies()
     {
-        return _context.Movies.Include(m => m.Genres).OrderBy(m => m.Title).ToList();
+        return _context.Movies.Include(m => m.Genres.OrderBy(g => g.Name)).OrderBy(m => m.Title).ToList();
     }
 
     public Movie GetMovieById(int movieId)
     {
-        return _context.Movies.Include(m => m.Genres).FirstOrDefault(m => m.MovieId == movieId);
+        return _context.Movies.Include(m => m.Genres.OrderBy(g => g.Name)).FirstOrDefault(m => m.MovieId == movieId);
     }
 
     public void AddMovie(Movie movie)

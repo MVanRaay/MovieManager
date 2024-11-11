@@ -1,0 +1,22 @@
+﻿@model Movie
+
+<ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+        <a class="nav-link" asp-action="AllMovies">All Movies</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-action="AddMovie">Add a Movie</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ViewBag.DetailsPage" asp-action="MovieDetails" asp-route-movieId="@Model.MovieId">Details</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ViewBag.EditPage" asp-action="EditMovie" asp-route-movieId="@Model.MovieId">Edit</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ViewBag.ManagePage" asp-action="ManageMovie" asp-route-movieId="@Model.MovieId">Manage</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ViewBag.DeletePage" asp-action="DeleteMovie" asp-route-movieId="@Model.MovieId">Delete</a>
+    </li>
+</ul>
