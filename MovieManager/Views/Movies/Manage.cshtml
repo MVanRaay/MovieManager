@@ -70,8 +70,8 @@
 
     <form method="post" asp-action="AddGenreToMovie">
         <input type="hidden" asp-for="@Model.Movie.MovieId"/>
-        <div class="input-group mb-3" style="width: 20rem;">
-            <select class="form-select" asp-for="SelectedGenre.GenreId">
+        @* <div class="input-group mb-3" style="width: 20rem;"> *@
+            <select class="form-select input-group mb-3" style="width: 20rem;" asp-for="SelectedGenre.GenreId">
                 @foreach (var genre in Model.AllGenres)
                 {
                     if (!Model.Movie.Genres.Contains(genre))
@@ -81,6 +81,6 @@
                 }
             </select>
             <input class="btn btn-outline-secondary" type="submit" value="Add Genre"/>
-        </div>
+        @* </div> *@
     </form>
 </div>
