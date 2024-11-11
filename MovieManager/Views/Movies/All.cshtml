@@ -1,0 +1,78 @@
+﻿@using MovieManager.Entities
+@model MoviesViewModel
+
+@{
+    ViewData["Title"] = "All Movies";
+    var mpaRatingAbbrMap = new Dictionary<MpaRating, string>()
+    {
+        [MpaRating.NotYetRated] = "NR",
+        [MpaRating.GeneralAudiences] = "G",
+        [MpaRating.ParentalGuidanceSuggested] = "PG",
+        [MpaRating.ParentsStronglyCautioned] = "PG-13",
+        [MpaRating.Restricted] = "R",
+        [MpaRating.AdultsOnly] = "NC-17",
+        [MpaRating.Unrated] = "UR",
+    };
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+        <a class="nav-link active" asp-action="AllMovies">All Movies</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-action="AddMovie">Add a Movie</a>
+    </li>
+</ul>
+
+@if(TempData.Keys.Contains("Message"))
+{
+<div class="alert alert-@TempData["ColorName"] mb-3 alert-dismissible fade show" role="alert">
+    @TempData["Message"]
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+}
+
+<table class="table table-bordered table-striped align-middle">
+    <thead>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Year</th>
+        <th scope="col">Duration (minutes)</th>
+        <th scope="col">Genres</th>
+        <th scope="col">Rating</th>
+        <th scope="col">MPA Rating</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var movie in Model.Movies)
+    {
+        <tr>
+            <td>@movie.Title</td>
+            <td>@movie.Year</td>
+            <td>@movie.Duration</td>
+            <td>
+                @for (int i = 0; i < movie.Genres.Count && i < 2; i++)
+                {
+                    @movie.Genres[i].Name
+
+                    if (i == 0 && movie.Genres.Count > 1)
+                    {
+                        <span>, </span>
+                    }
+                }
+            </td>
+            <td>@movie.Rating.ToString("N1")</td>
+            <td>@mpaRatingAbbrMap[movie.MpaRating]</td>
+            <td>
+                <a class="btn btn-outline-primary" asp-action="MovieDetails" asp-route-movieId="@movie.MovieId">Details</a> | 
+                <a class="btn btn-outline-info" asp-action="EditMovie" asp-route-movieId="@movie.MovieId">Edit</a> |
+                <a class="btn btn-outline-info" asp-action="ManageMovie" asp-route-movieId="@movie.MovieId">Manage</a> | 
+                <a class="btn btn-outline-danger" asp-action="DeleteMovie" asp-route-movieId="@movie.MovieId">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

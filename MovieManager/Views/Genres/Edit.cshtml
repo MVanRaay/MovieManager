@@ -1,0 +1,19 @@
+﻿@model GenreViewModel
+
+@{
+    ViewData["Title"] = "All Genres";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<partial name="_GenreNavTabsPartial" model="@Model.Genre" />
+
+<form method="post" asp-action="EditGenre" asp-route-genreId="@Model.Genre.GenreId">
+    <input type="hidden" asp-for="@Model.Genre.GenreId" />
+    <partial name="_GenreFormPartial" for="@Model.Genre"/>
+
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Save Changes"/>
+        <a class="btn btn-secondary" asp-action="AllGenres">Cancel</a>
+    </div>
+</form>

@@ -1,0 +1,26 @@
+﻿@model MovieViewModel
+
+@{
+    ViewData["Title"] = "Add a new Movie";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+        <a class="nav-link" asp-action="AllMovies">All Movies</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" asp-action="AddMovie">Add a Movie</a>
+    </li>
+</ul>
+
+<form method="post" asp-action="AddMovie">
+    <input type="hidden" asp-for="Movie.MovieId" />
+    <partial name="_MovieFormPartial" for="@Model.Movie"/>
+
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Add Movie"/>
+        <a class="btn btn-secondary" asp-action="AllMovies">Cancel</a>
+    </div>
+</form>

@@ -1,0 +1,19 @@
+﻿@model MovieViewModel
+
+@{
+    ViewData["Title"] = "Edit Movie";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<partial name="_MovieNavTabsPartial" model="@Model.Movie" />
+
+<form method="post" asp-action="EditMovie">
+    <input type="hidden" asp-for="Movie.MovieId" />
+    <partial name="_MovieFormPartial" for="@Model.Movie" />
+    
+    <div class="mb-3">
+        <input type="submit" class="btn btn-info" value="Save Changes"/>
+        <a class="btn btn-secondary" asp-action="AllMovies">Cancel</a>
+    </div>
+</form>

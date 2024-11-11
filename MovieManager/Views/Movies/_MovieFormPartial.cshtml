@@ -1,0 +1,55 @@
+﻿@model Movie
+
+@{
+    var mpaRatingMap = new Dictionary<MpaRating, string>()
+    {
+        [MpaRating.NotYetRated] = "NR - Not yet Rated",
+        [MpaRating.GeneralAudiences] = "G - General Audiences",
+        [MpaRating.ParentalGuidanceSuggested] = "PG - Parental Guidance Suggested",
+        [MpaRating.ParentsStronglyCautioned] = "PG-13 - Parents Strongly Cautioned",
+        [MpaRating.Restricted] = "R - Restricted",
+        [MpaRating.AdultsOnly] = "NC-17 - Adults Only",
+        [MpaRating.Unrated] = "UR - Unrated",
+    };
+}
+
+<div class="mb-3">
+    <label class="form-label" asp-for="Title">Title:</label>
+    <span class="text-danger" asp-validation-for="Title"></span>
+    <input class="form-control" type="text" asp-for="Title"/>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" asp-for="Description">Description:</label>
+    <span class="text-danger" asp-validation-for="Description"></span>
+    <input class="form-control" type="text" asp-for="Description"/>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" asp-for="Year">Year:</label>
+    <span class="text-danger" asp-validation-for="Year"></span>
+    <input class="form-control" type="text" asp-for="Year"/>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" asp-for="Duration">Duration (minutes):</label>
+    <span class="text-danger" asp-validation-for="Duration"></span>
+    <input class="form-control" type="text" asp-for="Duration"/>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" asp-for="Rating">Rating:</label>
+    <span class="text-danger" asp-validation-for="Rating"></span>
+    <input class="form-control" asp-for="Rating"/>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" asp-for="MpaRating">MPA Rating:</label>
+    <span class="text-danger" asp-validation-for="MpaRating"></span>
+    <select class="form-select" asp-for="MpaRating">
+        @foreach (var mpaRating in mpaRatingMap)
+        {
+            <option value="@mpaRating.Key">@mpaRating.Value</option>
+        }
+    </select>
+</div>

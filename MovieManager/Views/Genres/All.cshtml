@@ -1,0 +1,45 @@
+﻿@model GenresViewModel
+
+@{
+    ViewData["Title"] = "All Genres";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+        <a class="nav-link active" asp-action="AllGenres">All Genres</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-action="AddGenre">Add a Genre</a>
+    </li>
+</ul>
+
+@if(TempData.Keys.Contains("Message"))
+{
+    <div class="alert alert-@TempData["ColorName"] mb-3 alert-dismissible fade show" role="alert">
+        @TempData["Message"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var genre in Model.Genres)
+    {
+        <tr>
+            <td>@genre.Name</td>
+            <td>
+                <a class="btn btn-outline-info" asp-action="EditGenre" asp-route-genreId="@genre.GenreId">Edit</a>
+                <a class="btn btn-outline-danger" asp-action="DeleteGenre" asp-route-genreId="@genre.GenreId">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

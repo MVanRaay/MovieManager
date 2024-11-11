@@ -1,0 +1,86 @@
+﻿@model ManageMovieViewModel
+
+@{
+    ViewData["Title"] = "Manage Movie";
+    var mpaRatingMap = new Dictionary<MpaRating, string>()
+    {
+        [MpaRating.NotYetRated] = "NR - Not yet Rated",
+        [MpaRating.GeneralAudiences] = "G - General Audiences",
+        [MpaRating.ParentalGuidanceSuggested] = "PG - Parental Guidance Suggested",
+        [MpaRating.ParentsStronglyCautioned] = "PG-13 - Parents Strongly Cautioned",
+        [MpaRating.Restricted] = "R - Restricted",
+        [MpaRating.AdultsOnly] = "NC-17 - Adults Only",
+        [MpaRating.Unrated] = "UR - Unrated",
+    };
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<partial name="_MovieNavTabsPartial" model="@Model.Movie"/>
+
+<h1>@Model.Movie.Title</h1>
+
+<div class="row g-3 mb-3">
+    <div class="col-auto">
+        <div style="width: 100px; height: 150px; background-color: #343a40; color: white">thumbnail</div>
+    </div>
+    <div class="col-auto">
+        <p>
+            @Model.Movie.Year
+        </p>
+        <p>
+            @mpaRatingMap[Model.Movie.MpaRating]
+        </p>
+        <p>
+            @Model.Movie.Duration minutes
+        </p>
+        <p>
+            Rated <strong>@Model.Movie.Rating</strong>/10
+        </p>
+    </div>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" asp-for="Movie.Genres">Genres:</label>
+
+    <div class="card mb-3" style="width: 20rem;">
+        <ul class="list-group list-group-flush">
+            @foreach (var genre in Model.Movie.Genres)
+            {
+                <li class="list-group-item">
+                    <div class="container text-center">
+                        <form method="post" asp-action="RemoveGenreFromMovie">
+                            <input type="hidden" asp-for="Movie.MovieId" />
+                            <input type="hidden" asp-for="SelectedGenre.GenreId" value="@genre.GenreId" />
+                            
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-auto">
+                                    @genre.Name
+                                </div>
+                                <div class="col-4">
+                                    <input class="btn btn-secondary" type="submit" value="Remove"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <form method="post" asp-action="AddGenreToMovie">
+        <input type="hidden" asp-for="@Model.Movie.MovieId"/>
+        <div class="input-group mb-3" style="width: 20rem;">
+            <select class="form-select" asp-for="SelectedGenre.GenreId">
+                @foreach (var genre in Model.AllGenres)
+                {
+                    if (!Model.Movie.Genres.Contains(genre))
+                    {
+                        <option value="@genre.GenreId">@genre.Name</option>
+                    }
+                }
+            </select>
+            <input class="btn btn-outline-secondary" type="submit" value="Add Genre"/>
+        </div>
+    </form>
+</div>

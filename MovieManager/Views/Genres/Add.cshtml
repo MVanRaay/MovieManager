@@ -1,0 +1,25 @@
+﻿@model GenreViewModel
+
+@{
+    ViewData["Title"] = "All Genres";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+        <a class="nav-link" asp-action="AllGenres">All Genres</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" asp-action="AddGenre">Add a Genre</a>
+    </li>
+</ul>
+
+<form method="post" asp-action="AddGenre">
+    <partial name="_GenreFormPartial" for="@Model.Genre" />
+
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Add Genre"/>
+        <a class="btn btn-secondary" asp-action="AllGenres">Cancel</a>
+    </div>
+</form>

@@ -1,0 +1,58 @@
+﻿@model MovieViewModel
+
+@{
+    ViewData["Title"] = "Delete Movie";
+    var mpaRatingMap = new Dictionary<MpaRating, string>()
+    {
+        [MpaRating.NotYetRated] = "NR - Not yet Rated",
+        [MpaRating.GeneralAudiences] = "G - General Audiences",
+        [MpaRating.ParentalGuidanceSuggested] = "PG - Parental Guidance Suggested",
+        [MpaRating.ParentsStronglyCautioned] = "PG-13 - Parents Strongly Cautioned",
+        [MpaRating.Restricted] = "R - Restricted",
+        [MpaRating.AdultsOnly] = "NC-17 - Adults Only",
+        [MpaRating.Unrated] = "UR - Unrated",
+    };
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<partial name="_MovieNavTabsPartial" model="@Model.Movie" />
+
+<h1>@Model.Movie.Title</h1>
+
+<div class="row g-3 mb-3">
+    <div class="col-auto">
+        <div style="width: 200px; height: 300px; background-color: #343a40; color: white">thumbnail</div>
+    </div>
+    <div class="col-auto">
+        <div class="mb-3">
+            @Model.Movie.Year
+        </div>
+        <div class="mb-3">
+            @mpaRatingMap[Model.Movie.MpaRating]
+        </div>
+        <div class="mb-3">
+            @Model.Movie.Duration minutes
+        </div>
+        <div class="mb-3">
+            Rated <strong>@Model.Movie.Rating</strong>/10
+        </div>
+        <div class="mb-3">
+            Genres: 
+            <ul class="list-unstyled">
+                @foreach (var genre in @Model.Movie.Genres)
+                {
+                    <li>@genre.Name</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<form method="post" asp-action="DeleteMovie">
+    <input type="hidden" asp-for="Movie.MovieId" value="@Model.Movie.MovieId" />
+    <div class="mb-3">
+        <input class="btn btn-outline-danger" type="submit" value="Delete"/>
+        <a class="btn btn-secondary" asp-action="AllMovies">Cancel</a>
+    </div>
+</form>
